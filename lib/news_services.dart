@@ -4,7 +4,7 @@ import 'package:news_app/news_model.dart';
 import 'package:http/http.dart' as http;
 
 class NewsService {
-  static const String _apiKey = 'REMOVED_API_KEY';
+  static const String _apiKey = String.fromEnvironment('NEWS_API_KEY');
   static const String _baseUrl = 'https://newsapi.org/v2';
 
   Future<List<NewsModel>> fetchSources() async {
